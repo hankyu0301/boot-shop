@@ -25,19 +25,31 @@ public class Member extends BaseEntity {
     private String nickname;
     private String username;
 
+    private String refreshToken;
+    private Boolean emailAuth;
+
     @Enumerated(EnumType.STRING)
     private MemberRole memberRole;
 
-    public Member(String email, String password, String nickname, String username, MemberRole memberRole) {
+    public Member(String email, String password, String nickname, String username, Boolean emailAuth, MemberRole memberRole) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;
         this.username = username;
+        this.emailAuth = emailAuth;
         this.memberRole = memberRole;
     }
 
     public void updateMember(String password, String nickname) {
         this.password = password;
         this.nickname = nickname;
+    }
+
+    public void updateRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
+
+    public void emailVerifiedSuccess() {
+        this.emailAuth = true;
     }
 }

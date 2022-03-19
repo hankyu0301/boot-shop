@@ -1,5 +1,6 @@
 package janghankyu.bootshop.controller.member;
 
+import janghankyu.bootshop.dto.email.EmailAuthRequestDto;
 import janghankyu.bootshop.dto.member.SignUpRequestDto;
 import janghankyu.bootshop.dto.member.validator.SignUpRequestValidator;
 import janghankyu.bootshop.service.member.MemberService;
@@ -36,6 +37,12 @@ public class MemberController {
         }
 
         memberService.save(dto);
+        return "member/checkEmail";
+    }
+
+    @GetMapping("/confirm-email")
+    public String confirmEmail(@ModelAttribute EmailAuthRequestDto requestDto) {
+        memberService.confirmEmail(requestDto);
         return "redirect:/";
     }
 

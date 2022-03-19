@@ -26,6 +26,9 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+src/main/resources/application-mail.yml
+src/main/resources/application-secret.yml
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

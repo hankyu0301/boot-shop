@@ -1,4 +1,4 @@
-package janghankyu.bootshop.config;
+package janghankyu.bootshop.config.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +21,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
+                .formLogin().loginPage("/login").usernameParameter("email").defaultSuccessUrl("/")
+                .and()
                 .authorizeRequests()
                 .anyRequest().permitAll();
     }
