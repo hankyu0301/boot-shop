@@ -1,6 +1,6 @@
 package janghankyu.bootshop.controller.category;
 
-import janghankyu.bootshop.entity.category.CategoryCreateRequest;
+import janghankyu.bootshop.dto.category.CategoryCreateRequest;
 import janghankyu.bootshop.service.category.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

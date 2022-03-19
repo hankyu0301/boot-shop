@@ -1,5 +1,6 @@
 package janghankyu.bootshop.entity.category;
 
+import janghankyu.bootshop.entity.item.Item;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

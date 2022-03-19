@@ -1,4 +1,4 @@
-package janghankyu.bootshop.entity.category;
+package janghankyu.bootshop.dto.category;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

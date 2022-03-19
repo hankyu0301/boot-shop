@@ -2,7 +2,7 @@ package janghankyu.bootshop.service.category;
 
 import janghankyu.bootshop.dto.category.CategoryDto;
 import janghankyu.bootshop.entity.category.Category;
-import janghankyu.bootshop.entity.category.CategoryCreateRequest;
+import janghankyu.bootshop.dto.category.CategoryCreateRequest;
 import janghankyu.bootshop.exception.CategoryNotFoundException;
 import janghankyu.bootshop.repository.category.CategoryRepository;
 import lombok.RequiredArgsConstructor;
